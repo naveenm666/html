@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head>
+	<title>catering</title>
+     </head>
+     <body > 
+     	<div class="top">
+     		<div class="border" style="letter-spacing: 4px;background-color:white;margin-bottom: 10px">
+     			<a href="#home" class="border" style="text-align: left;font-size: 15px;color: black;text-decoration: none">Gourmet au catering</a>
+     			<a href="#about" class="border" style="text-align:center;font-size: 15px;color: black;text-decoration: none;padding: right;margin-left: 800px" >About</a>
+     			<a href="#menu" class="border" style="text-align:center;font-size: 15px;color: black;text-decoration: none;padding: right;margin-left: 30px" >Menu</a>
+     			<a href="#contract" class="border" style="text-align:center;font-size: 15px;color: black;text-decoration: none;padding: right;margin-right: 10px;margin-left: 30px" >Contract</a>
+     		</div></div>
+    <img src="google_files/hamburger.jpg" style="margin-bottom: 6px">
+    <img src="google_files/tablesetting2.jpg" style="margin-bottom: 6px">
+         
+         <article>
+         	<h1>About catering</h1>
+         </article>
+     <img src="google_files/tablesetting.jpg" style="border-left-width: 30px;padding-left: 60px;margin-left:670px ;margin-right:60px ;padding-right: 50px">
+           
+
+
+
+           <h1 style="margin-left: 100px;width:1090px ;height:40px ;border-top:70px ;border-bottom-width: 30px;letter-spacing: 5px ;padding-top:60pxpx ;padding-left: 50px;padding-bottom: 20px">Contact</h1>
+
+
+           <p style="height: 35px;margin-left: 150px;border-left-width: 60px;font-size: 15px;margin-right: 130px">We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+
+
+
+           <p style="margin-left: 150px;font-size: 18px;color: #607d8b">Catering Service, 42nd Living St, 43043 New York, NY</p>
+           <p style="margin-left: 150px;font-size: 15px">You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:
+
+                </p>
+                
+               <input 
+                class="w3-input w3-padding-16" type="text" placeholder="Name" requiredname="Name" style="margin-left: 150px;padding-bottom:13px ;padding-top:20px ;padding-right: 880px;box-decoration-break: none;font-size: 15px;padding-left:17px;border-left-width:0px;border-right-width: 0px;border-top-width: 0px;border-bottom-width: 1px">
+                <input type="number" placeholder="How many people" required="" name="People" style="margin-left: 150px;padding-bottom:13px ;padding-top:20px ;padding-right: 880px;box-decoration-break: none;font-size: 15px;padding-left:17px;border-left-width:0px;border-right-width: 0px;border-top-width: 0px;border-bottom-width: 1px">
+                <input type="datetime-local" placeholder="Date and time" required="" name="date" value="2020-11-16T20:00" style="margin-left: 150px;padding-bottom:13px ;padding-top:20px ;padding-right: 20px;box-decoration-break: none;font-size: 15px;padding-left:17px;border-left-width:0px;border-right-width: 0px;border-top-width: 0px;width: 1064px;border-bottom-width: 1px">
+                <input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required="" name="Message" style="margin-left: 150px;padding-bottom:13px ;padding-top:20px ;padding-right: 880px;box-decoration-break: none;font-size: 15px;padding-left:17px;border-left-width:0px;border-right-width: 0px;border-top-width: 0px;border-bottom-width: 1px">
+               <button class="w3-button w3-light-grey w3-section" type="submit" style="margin-left: 150px;font-size: 15px;padding-left:17px;border-left-width:0px;border-right-width: 0px;border-top-width: 0px;border-bottom-width: 0px;padding-right:30px ;padding-top: 0px ;margin-top: 20px">SEND MESSAGE</button>
+<body>
