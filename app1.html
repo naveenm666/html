@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script>
+    var items = [
+      {
+        id: 1,
+        name: "starters",
+        price: 300
+      },
+      {
+        id: 2,
+        name: "biriyani",
+        price: 299
+      },
+      {
+        id: 3,
+        name: "icecream",
+        price: 199
+      },
+      {
+        id: 4,
+        name: "drinks",
+        price: 99
+      }
+    ];
+
+  $(document).ready(function() {
+      var itemsHtml = "<ol>";
+
+        for (var i = 0; i < items.length; i++) {
+            itemsHtml =itemsHtml +
+              "<li>" + items[i].name +" -- " +"price: " +items[i].price +"     " +
+                "<button data-name='" + items[i].name + "' data-id='" + items[i].id + "' data-price='" +items[i].price +"'>Add to Cart</button>" +"</li>";
+         }
+
+         var output = itemsHtml + "</ol>";
+         $("#first").html(output);
+         $("#a").hide();
+         
+
+          var cart = []; 
+      $("button").click(function() {
+        //debugger
+            var itemData = $(this).data();
+            
+            var itemId=$(this).data("id");
+            for (let i = 0; i < cart.length; i++) {
+              if (cart[i].id === itemId) {
+                 selectedItem = cart[i];
+              }
+            }
+            if (selectedItem) {
+                selectedItem.count++;
+          
+
+
+            } else {   
+              var  selectedItem = {
+                id: itemData.id,
+                name: itemData.name,
+                price: Number(itemData.price),
+                count:1,
+                
+              };
+              cart.push(selectedItem);
+              console.log(cart);  
+            }
+             
+            var cartHtml = "<ul>";
+            for (var j = 0; j < cart.length; j++) {
+              cartHtml =
+               cartHtml+ "<li>"+ cart[j].name + " - price: " + cart[j].price +"--count-"+cart[j].count +"<button class='delete' data-id="+cart[j].id+">delete</button>"+"</li>";
+            }
+            cartHtml =cartHtml+ "</ul>"; 
+            $("#cart").html("CART" + cartHtml);
+             
+            $('.delete').click(function() {
+                var itemId = $(this).data("id");
+             
+              for (var i = 0; i < cart.length; i++) {
+                if (cart[i].id == itemId) {
+                  debugger
+                  if (cart[i].count == 1){
+                     cart.splice(i, 1)
+                  } else{
+                    cart[i].count--;  
+                  }
+                  
+                }
+              }
+
+
+             debugger
+           //  var cartHtml = "<ul>";
+           //  for (var j = 0; j < cart.length; j++) {
+           //    //debugger
+           //    cartHtml =cartHtml+ "<li>"+ cart[j].name + " - price: " + cart[j].price +"--count-"+cart[j].count +"<button class='delete' data-id="+cart[j].id+">delete</button>"+"</li>";
+           // //debugger
+           //  }
+
+            var cartHtml = "<ul>";
+            for (var j = 0; j < cart.length; j++) {
+              cartHtml =
+               cartHtml+ "<li>"+ cart[j].name + " - price: " + cart[j].price +"--count-"+cart[j].count +"<button class='delete' data-id="+cart[j].id+" data-price="+cart[i].price+">delete</button>"+"</li>";
+            }
+            cartHtml =cartHtml+ "</ul>"; 
+           // $("#cart").html("CART" + cartHtml);
+            
+           // cartHtml =cartHtml+ "</ul>";
+               var total = 0;
+               for (var k = 0; k < cart.length; k++) {
+                total =total+ cart[k].price * cart[k].count;
+             }
+             $("#p").text(total);
+               var price=$(this).data("price");
+               var adjustedTotal = Number($("#p").text()) - Price;
+               $("#p").text(adjustedTotal);
+           
+         });
+           
+          
+            
+           data = $(this).data();
+            total=$("#p").text();
+            total=Number(total);
+            total=total + data.price;
+            $("#p").text(total);
+            $("#a").show();
+
+        
+      });
+  });
+  </script>
+</head>
+<body>
+  <p id="first"></p>
+  <div id="cart">
+  </div>
+  <p id="a">TOTAL:
+  <span id="p"></span></P>
+  
+  
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <style>
+    .done {
+      color: green;
+      text-decoration: line-through;
+    }
+
+    .pending {
+      color: red;
+    }
+  </style>
+  <script>
+    var tasks = [
+      {
+        description: "set vegetables",
+        status: "pending"
+      },
+      {
+        description: "book bus tickets",
+        status: "done"
+      },
+      {
+        description: "buy a car",
+        status: "pending"
+      },
+      {
+        description: "bike repair",
+        status: "done"
+      }
+       ];
+
+    $(document).ready(function() {
+      var tasksHtml = "<ol>";
+      for (var i = 0; i < tasks.length; i++) {
+        var task = tasks[i];
+        // var taskClass = task.status === "done" ? "done" : "pending";
+        if (task.status === "done") {
+          var taskClass = "done"
+        } else {
+          var taskClass = "pending"
+        }
+        tasksHtml += "<li class='" + taskClass + "'>" + task.description + "</li>";
+      }
+      tasksHtml += "</ol>";
+
+      $("#s").html(tasksHtml);
+    });
+  </script>
+<body>
+  <p id="s"></p> 
+</body>
+</html>

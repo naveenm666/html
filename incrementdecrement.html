@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>INCREMENT AND DECREMENT</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div>
+  <button id="increment">+</button>
+  <p id="counter" value="0">0</p>
+  <button id="decrement">-</button>
+</div>
+  <script>
+    $(document).ready(function() {
+ $("#increment").click(function() {
+   x=$("#counter").text();
+   x=Number(x);
+   x=x+1;
+   $("#counter").text(x);
+  });
+
+
+  $("#decrement").click(function() {
+   x=$("#counter").text();
+   x=Number(x);
+   x=x-1;
+   $("#counter").text(x);
+  });
+});
+  </script>
+
+</body>
+</html>

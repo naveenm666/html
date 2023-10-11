@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script >
+    var items = [
+      {
+        id: 1,
+        name:"starters",
+        price: 300
+      },
+      {
+        id: 2,
+        name:"biriyani",
+        price: 299
+      },
+      {
+       id: 3,
+       name:"icecream",
+       price: 199
+      },
+      {
+       id: 4, 
+       name:"drinks",
+       price: 99
+      }
+      ]
+
+   $(document).ready(function() {
+      // debugger
+  
+      itemsHtml = "<ol>"; 
+
+      for (var i = 0; i < items.length; i++) {
+        itemsHtml= itemsHtml+ "<li>" + ""+items[i].name + " -- "+"price:" + items[i].price +"     "+ "<button data-name='" + items[i].name + "'data-price='"+items[i].price+"'>addcart</button>" +"</li>"
+      }
+      output= itemsHtml + "</ol>";       
+
+      $("#first").html(output);
+       $("#cart").hide();
+    
+      
+       $("button").click(function() {
+           data = $(this).data();
+           total=$("#b").text();
+           total=Number(total);
+           total=total+data.price;
+            $("#b").text(total);
+            itemName = data.name;
+         $("#c").append("<span>" + itemName + "</span><br>");
+
+          x=$("#a").text();
+          x=Number(x);
+           x=x+1;
+          $("#a").text(x);
+          $("#cart").show();
+       });
+
+
+    });
+  </script>
+  
+</head>
+<body>
+  <p id="first" ></p>
+    <div id="cart">CART
+  <p id="n" value="0">itemcount:
+   <span id="a" value="0"></span></p>
+  <p id="p" value="0">totalprice:
+    <span id="b" valu="0"></span> </p>
+    <span id="c"></span>
+  </div>
+</body>
+</html>
